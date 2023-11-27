@@ -1,81 +1,93 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Observatório - Login</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="css/estilo.css" rel="stylesheet">
-		<script type="text/javascript" src="js/script.js"></script>
-	</head>
-	<body>
-	
-		<header>
-		  <h2>Observatório - Login / Cadastro</h2>
-		</header>
-		
-		
-	
-		<div>
-			<p style="text-align:center">Realize o login / Cadastro para acessar ao Observatório.</p>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Observatório - Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
 
-            <?php
-                if(isset($_GET['erro'])){
-                    echo '<p style="text-align:center; color:red"> Usuário ou Senha incorretos! </p>';
-                }
+    <header class="bg-dark text-light text-center py-4">
+        <h2>Observatório - Login / Cadastro</h2>
+    </header>
 
-                if(isset($_GET['autentica'])){
-                    echo '<p style="text-align:center; color:red"> Sem negado! Usuário não logado! Por favor, efetue o Login </p>';
-                }
-            ?>
-			<h2>Login</h2>
-			<form action="login.php" method="post">
-			
-				<label for="login">Login</label> 
-				<input type="text" name="login" id="login"/>
-				
-				<label for="senha">Senha</label> 
-				<input type="password" name="senha" id="senha" /><br/><br/>
-				
-				<input type="submit" value="Logar">
-			
-			</form>
-		</div>
+    <div class="container mt-4">
+        <p class="text-center">Realize o login / Cadastro para acessar ao Observatório.</p>
 
-		<div>
-            <div>
-                <h2>Cadastrar</h2>
-                    <form action="cadastro.php" method="POST">
-                            
-                        <label>Nome de usuário</label>
-                        <input name="nome_usuario" type="text" required>
-                                
-                            
-                        <label>Login</label>                        
-                        <input name="login" type="text" required>
+        <?php
+            if(isset($_GET['erro'])){
+                echo '<p class="text-center text-danger">Usuário ou Senha incorretos!</p>';
+            }
 
+            if(isset($_GET['autentica'])){
+                echo '<p class="text-center text-danger">Sem negado! Usuário não logado! Por favor, efetue o Login</p>';
+            }
+        ?>
 
-                        <label>Senha</label> 
-                        <input name="senha1" id="senha1" type="password" required> 
-                        
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Login</h2>
+                <form action="login.php" method="post">
 
-                        <label>Confirma Senha</label> 
-                        <input name="senha2" id="senha2" type="password" onkeyup="validarSenha()" required>
-                            <p>
-                                <input type="checkbox" class="w3-btn w3-theme"  onclick="mostrarOcultarSenhaCadastro()"> <b>Mostrar senha</b>
-                            </p>
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" name="login" id="login" />
+                    </div>
 
-                        <input type="submit" value="Cadastrar">
-                    </form>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" name="senha" id="senha" />
+                    </div>
 
-                        
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary" value="Logar">
+                    </div>
 
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="text-center">Cadastrar</h2>
+                <form action="cadastro.php" method="POST">
+
+                    <div class="form-group">
+                        <label for="nome_usuario">Nome de usuário</label>
+                        <input type="text" class="form-control" name="nome_usuario" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login_cadastro">Login</label>
+                        <input type="text" class="form-control" name="login_cadastro" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha1">Senha</label>
+                        <input type="password" class="form-control" name="senha1" id="senha1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha2">Confirma Senha</label>
+                        <input type="password" class="form-control" name="senha2" id="senha2" onkeyup="validarSenha()" required>
+                        <p>
+                            <input type="checkbox" class="btn btn-info" onclick="mostrarOcultarSenhaCadastro()"> <b>Mostrar senha</b>
+                        </p>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-success" value="Cadastrar">
+                    </div>
+
+                </form>
             </div>
         </div>
-		
-		
+    </div>
 
-		<footer>
-		  <p>Todos direitos reservados.</p>
-		</footer>
-	</body>
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+        <p>Todos direitos reservados.</p>
+    </footer>
+
+</body>
 </html>
