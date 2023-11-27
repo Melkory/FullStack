@@ -7,12 +7,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Cor de fundo suave */
+            background-color: #f8f9fa; 
         }
 
         header {
-            background-color: #343a40; /* Cor de fundo da barra de cabeçalho */
-            color: #ffffff; /* Cor do texto na barra de cabeçalho */
+            background-color: #343a40; 
+            color: #ffffff; 
             text-align: center;
             padding: 20px 0;
         }
@@ -23,8 +23,8 @@
         }
 
         footer {
-            background-color: #343a40; /* Cor de fundo do rodapé */
-            color: #ffffff; /* Cor do texto no rodapé */
+            background-color: #343a40; 
+            color: #ffffff; 
             padding: 10px 0;
             text-align: center;
         }
@@ -35,6 +35,13 @@
     </style>
 </head>
 <body>
+
+    <?php
+        session_start();
+        session_destroy();
+        header('location: /Universo/index.php');
+        exit();
+    ?>
 
     <header class="container-fluid">
         <h2>Observatório X</h2>

@@ -109,3 +109,12 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
+.paragrafo-estilizado {
+  background-color: #90A19D; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  color: #333; /* Cor do texto */
+  font-family: 'Arial', sans-serif; /* Fonte do texto */
+}

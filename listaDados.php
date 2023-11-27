@@ -73,7 +73,7 @@
 
                                 // Se deu certo e encontrou registros
                                 if ($res) {
-                                    // Percorre os planetas encontrados
+                                    // Percorre os Planetas encontrados
                                     while ($row = mysqli_fetch_assoc($res)) {
                                         echo "<tr>
                                                 <td>" . $row['id'] . "</td>
@@ -124,7 +124,7 @@
 
                                 // Se deu certo e encontrou registros
                                 if ($res) {
-                                    // Percorre as galaxias encontradas
+                                    // Percorre as Galáxias encontradas
                                     while ($row = mysqli_fetch_assoc($res)) {
                                         echo "<tr>
                                                 <td>" . $row['id_galaxia'] . "</td>

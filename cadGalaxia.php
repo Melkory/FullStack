@@ -9,12 +9,13 @@
         die("ERRO: Não foi possível conectar com o Banco de Dados!");
     }
 
+    //Armazena variáveis para caso seja UPDATE
     $id_galaxia = "";
     $nome_gal = "";
     $qtd_planetas = "";
     $distancia = "";
 
-    // Se a tela está sendo aberta para edição
+    // Se a tela está sendo aberta para UPDATE
     if (isset($_GET['id_galaxia'])) {
 
         // Obtém o parâmetro ID que foi enviado via GET
@@ -47,7 +48,7 @@
 
     <?php
         if (isset($_GET['id_galaxia'])) {
-            // Obtém o parâmetro ID que foi enviado via GET
+            // Verifica se a operação é UPDATE e atualiza o título
             echo ("<header class='container-fluid bg-dark text-white text-center py-3'>
                         <h2>Atualizar Cadastro de Galaxias</h2>
                     </header>");
@@ -61,6 +62,7 @@
     <section class="container mt-3">
         <nav class="row">
             <div class="col-md-3">
+                <!-- Menu Lateral -->
                 <ul id="menu" class="nav flex-column">
                     <li class="nav-item">
                         <a href="menu.php" class="nav-link active">Menu</a>
@@ -83,6 +85,7 @@
 
             <div class="col-md-9">
                 <article>
+                    <!-- Formulário para Insert / Update de Galáxias -->
                     <form action="gravaGalaxia.php" method="post">
 
                         <input type="hidden" name="id_galaxia" value="<?php echo $id_galaxia; ?>" />
@@ -104,6 +107,7 @@
 
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
+                    <br>
                     <a href="menu.php" class="btn btn-secondary">Voltar</a>
                 </article>
             </div>

@@ -12,7 +12,7 @@ function mostrarOcultarSenhaCadastro() {
     }
   }
   
-  // Script para validar confirmação de senha Ok
+  // Script para validar confirmação das senhas iguais
   function validarSenha() {
     var senha  = document.getElementById("senha1");
     var senha2 = document.getElementById("senha2");
@@ -26,3 +26,14 @@ function mostrarOcultarSenhaCadastro() {
       return true;
     }
   }
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

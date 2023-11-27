@@ -15,10 +15,8 @@
 	$senha = $_POST['senha1'];
 	$nome_usuario = $_POST['nome_usuario'];
 
-
-
     //INSERÇÃO
-        //Monta o código SQL para inserir o galaxia
+        //Monta o código SQL para inserir na tabela usuario
         $sql = "INSERT INTO usuario (login, senha, nome_usuario) 
                 VALUES 
                 ('$login', md5('$senha'), '$nome_usuario')";

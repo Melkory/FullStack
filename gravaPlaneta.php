@@ -23,7 +23,7 @@
 
     //INSERÇÃO
     if(empty($id)){
-        //Monta o código SQL para inserir o planeta
+        //Monta o código SQL para inserir o Planeta
         $sql = "INSERT INTO planeta (nome, lua, massa, presenca_vida, id_galaxia, gravidade) 
                 VALUES 
                 ('$nome', '$lua', '$massa', '$presenca_vida', '$gal', '$gravidade')";
@@ -53,13 +53,13 @@
         WHERE
         id = $id";
 
-        //Envia código SQL ao MySQL (enviando sql para atualizar paciente)
+        //Envia código ao MySQL
         $res = mysqli_query($conn, $sql);
 
-        //Se SQL executou sem erros (se atualizou no BD)
+        //Se SQL executou sem erros
         if($res){
         header("Location: listaDados.php");
-        //echo "SUCESSO!";
+
         }
         else{
         echo "ERRO!";

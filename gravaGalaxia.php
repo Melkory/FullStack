@@ -21,7 +21,7 @@
 
     //INSERÇÃO
     if(empty($id_galaxia)){
-        //Monta o código SQL para inserir o galaxia
+        //Monta o código SQL para inserir a Galáxia
         $sql = "INSERT INTO galaxia (nome_gal, qtd_planetas, distancia) 
                 VALUES 
                 ('$nome_gal', '$qtd_planetas', '$distancia')";
@@ -36,6 +36,7 @@
         else{
             echo "ERRO AO INSERIR!";
         }
+    //UPDATE
     } else {
         //Monta o SQL com os campos enviados pelo usuário
 		$sql = "UPDATE galaxia SET 
@@ -45,13 +46,13 @@
         WHERE
         id_galaxia = $id_galaxia";
 
-        //Envia código SQL ao MySQL (enviando sql para atualizar paciente)
+        //Envia código ao MySQL
         $res = mysqli_query($conn, $sql);
 
-        //Se SQL executou sem erros (se atualizou no BD)
+        //Se SQL executou sem erros
         if($res){
         header("Location: listaDados.php");
-        //echo "SUCESSO!";
+        
         }
         else{
         echo "ERRO!";

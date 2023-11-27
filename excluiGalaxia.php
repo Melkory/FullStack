@@ -2,10 +2,9 @@
 require 'bd/conectaBD.php';
 require 'autentica.php';
 
-// Verifica se o parâmetro "id" foi passado
-if (isset($_GET['id'])) {
-    // Obtém o valor de "id" da URL
-    $id = $_GET['id'];
+
+    // Obtém o valor de "id_galaxia" da URL
+    $id = $_GET['id_galaxia'];
 
     // Abre conexão com o MySQL
     $conn = new mysqli($servername, $username, $password, $database);
@@ -15,9 +14,9 @@ if (isset($_GET['id'])) {
         die("ERRO: Não foi possível conectar com o Banco de Dados!");
     }
 
-   // Exclusão
-// Faz DELETE na Base de Dados
-    $sql = "DELETE FROM id_galaxia WHERE id_galaxia = $id";
+    // Exclusão
+    // Faz DELETE na Base de Dados
+    $sql = "DELETE FROM galaxia WHERE id_galaxia = $id";
 
     if ($result = mysqli_query($conn, $sql)) {
         $mensagem = "Registro excluído com sucesso!";
@@ -32,10 +31,7 @@ if (isset($_GET['id'])) {
 
     // Fecha a conexão com o BD
     $conn->close();
-} else {
-    // Se "id" não foi passado, exibe uma mensagem de erro
-    $mensagem = "Erro: Parâmetro 'id' não foi encontrado na URL.";
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +39,8 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusão de Registro</title>
+    <title>Exclusão de Galáxia</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <!-- Adicione outros estilos ou links necessários -->
 </head>
 <body>
 

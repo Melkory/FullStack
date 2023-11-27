@@ -12,25 +12,25 @@
 
     <style>
         body {
-            background-color: #f8f9fa; /* Cor de fundo suave */
+            background-color: #f8f9fa; 
         }
 
         header {
-            background-color: #343a40; /* Cor de fundo da barra de cabeçalho */
-            color: #ffffff; /* Cor do texto na barra de cabeçalho */
+            background-color: #343a40; 
+            color: #ffffff; 
             text-align: center;
             padding: 20px;
         }
 
         nav {
-            background-color: #e9ecef; /* Cor de fundo da barra de navegação */
+            background-color: #e9ecef; 
             padding: 15px;
             border-radius: 5px;
             margin-top: 20px;
         }
 
         nav a {
-            color: #495057; /* Cor do texto na barra de navegação */
+            color: #495057; 
             font-size: 18px;
         }
 
@@ -40,11 +40,20 @@
         }
 
         footer {
-            background-color: #343a40; /* Cor de fundo do rodapé */
-            color: #ffffff; /* Cor do texto no rodapé */
+            background-color: #343a40; 
+            color: #ffffff; 
             padding: 10px 0;
             text-align: center;
             margin-top: 20px;
+        }
+
+        .paragrafo-estilizado {
+            background-color: #90A19D; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            color: #333; 
+            font-family: 'Arial', sans-serif; 
         }
     </style>
 </head>
@@ -76,7 +85,20 @@
             
             <div class="col-md-9">
                 <article>
-                    <p class="mt-3">Bem-vindo ao Observatório X, <?php echo $_SESSION['nome_usuario'];?></p>
+                    <p class="paragrafo-estilizado">Bem-vindo(a), <?php echo $_SESSION['nome_usuario'];?></p>
+                    <p class="paragrafo-estilizado">
+                        Bem-vindo ao fascinante Observatório da Pontifícia Universidade Católica do Paraná! Embarque conosco em uma jornada cósmica única, explorando os mistérios e maravilhas do universo. Nossa atividade de cadastro de planetas e galáxias oferece uma oportunidade emocionante para você se tornar parte integrante da nossa comunidade de entusiastas da astronomia.
+                    </p>
+                    <p class="paragrafo-estilizado">
+                        Ao participar dessa atividade, você terá a chance de catalogar e contribuir para o conhecimento astronômico, enriquecendo nossa base de dados com informações valiosas sobre os corpos celestes que povoam o vasto cosmos. Seja um verdadeiro explorador do espaço, fornecendo dados sobre a localização, características e peculiaridades de planetas e galáxias que capturam sua curiosidade.
+                    </p>
+                    <p class="paragrafo-estilizado">
+                        Nosso sistema de cadastro intuitivo e amigável torna a participação fácil e empolgante. Sinta-se à vontade para compartilhar suas observações, descobertas e até mesmo curiosidades sobre os fenômenos celestes que encontrar durante suas explorações. Ao unir-se a nós, você se torna parte de uma comunidade apaixonada pela exploração do desconhecido, onde cada contribuição conta para ampliar nossa compreensão do universo.
+                    </p>
+                    <p class="paragrafo-estilizado">
+                        Prepare-se para uma experiência enriquecedora e educativa, enquanto mergulha nas maravilhas do espaço sideral e contribui para o avanço do conhecimento astronômico. Junte-se a nós no Observatório da PUC-PR e ajude a desvendar os segredos do cosmos!
+                    </p>
+
                     <a href="logout.php" class="btn btn-danger mt-3">Sair</a>
                 </article>
             </div>
